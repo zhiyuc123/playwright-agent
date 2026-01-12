@@ -1,0 +1,84 @@
+{
+	"name": "playwright-agent",
+	"private": false,
+	"version": "0.0.1",
+	"type": "module",
+	"main": "./dist/esm/playwright-agent.js",
+	"module": "./dist/esm/playwright-agent.js",
+	"types": "./dist/esm/PlaywrightAgent.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/esm/PlaywrightAgent.d.ts",
+			"import": "./dist/esm/playwright-agent.js",
+			"default": "./dist/esm/playwright-agent.js"
+		}
+	},
+	"files": [
+		"dist/"
+	],
+	"description": "Playwright version of page-agent - AI agent for browser automation",
+	"keywords": [
+		"ai",
+		"automation",
+		"playwright",
+		"ui-agent",
+		"browser-automation",
+		"web-agent",
+		"llm"
+	],
+	"author": "zhiyuc123<zhiyuc@outlook.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zhiyuc123/playwright-agent.git"
+	},
+	"homepage": "https://github.com/zhiyuc123/playwright-agent/",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite build --watch",
+		"test": "tsx test.ts",
+		"lint": "eslint ."
+	},
+	"dependencies": {
+		"@page-agent/llms": "0.0.18",
+		"chalk": "^5.6.2",
+		"dotenv": "^17.2.3",
+		"playwright": "^1.48.0",
+		"zod": "^4.3.5"
+	},
+	"devDependencies": {
+		"@microsoft/api-extractor": "^7.55.2",
+		"@types/node": "^25.0.3",
+		"eslint": "^9.39.2",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-react-dom": "^2.5.5",
+		"eslint-plugin-react-hooks": "^7.0.1",
+		"eslint-plugin-react-refresh": "^0.4.26",
+		"eslint-plugin-react-x": "^2.5.5",
+		"globals": "^17.0.0",
+		"prettier": "^3.7.4",
+		"tsx": "^4.21.0",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.52.0",
+		"unplugin-dts": "^1.0.0-beta.6",
+		"vite": "^7.3.0"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"semi": false,
+		"useTabs": true,
+		"printWidth": 100,
+		"trailingComma": "es5",
+		"plugins": [
+			"@trivago/prettier-plugin-sort-imports"
+		],
+		"importOrder": [
+			"<THIRD_PARTY_MODULES>",
+			"^(@/).*(?<!css)$",
+			"^[./].*(?<!css)$",
+			".css$"
+		],
+		"importOrderSeparation": true,
+		"importOrderSortSpecifiers": true
+	}
+}
